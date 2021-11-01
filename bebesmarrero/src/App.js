@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+import logo from './Sheep-logo.png';
+
 import './App.css';
 
 function App() {
@@ -6,16 +7,21 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="head-content">
+        <h1>
+          MI PEQUEÑA MARGOT
+        </h1>
+        </div>
+        <h4>
+          ECOMMERCE DE TIENDA DE ROPA PARA BEBES
+        </h4>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://instagram.com/mipequenamargot?utm_medium=copy_link"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          VISITANOS EN INSTAGRAM
         </a>
       </header>
     </div>

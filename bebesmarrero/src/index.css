@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&display=swap");
+
+h1{
+  font-family: 'Barriecito', cursive;
+  font-size: 50px;
+}
