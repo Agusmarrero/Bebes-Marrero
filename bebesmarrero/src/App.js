@@ -13,7 +13,6 @@ function App() {
         </h1>
         </div>
         <h4>
-          ECOMMERCE DE TIENDA DE ROPA PARA BEBES
           ECOMMERCE DE ROPA PARA BEBES
         </h4>
         <a
