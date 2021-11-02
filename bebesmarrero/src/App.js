@@ -14,6 +14,7 @@ function App() {
         </div>
         <h4>
           ECOMMERCE DE TIENDA DE ROPA PARA BEBES
+          ECOMMERCE DE ROPA PARA BEBES
         </h4>
         <a
           className="App-link"
