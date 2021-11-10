@@ -1,6 +1,6 @@
 import React from 'react'
 import './ListProducts.css';
-const ListProducts = (props) => {
+const ItemListContainer = (props) => {
   return (
     <div className="container">
         <div className="photoInit">
@@ -14,4 +14,4 @@ const ListProducts = (props) => {
   )
 }
 
-export default ListProducts
+export default ItemListContainer
