@@ -15,12 +15,14 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar/>
-      <header className="App-header" >
+      <header className="App-header">
+        <NavBar />
+      </header>
+      <div className="App-body">
         <ItemListContainer bodyPhoto={foto3} bodyPhoto2={foto5} title={'BODY - ESTOCOLMO'} width={300} height={300} />
         <ItemListContainer bodyPhoto={foto6} bodyPhoto2={foto4} title={'CUBREPAÑALES'} width={300} height={300} />
         <ItemListContainer bodyPhoto={foto7} bodyPhoto2={foto1} title={'CONJUNTOS'} width={300} height={300} />
-      </header>
+      </div>
       <Footer></Footer>
     </div>
   );
