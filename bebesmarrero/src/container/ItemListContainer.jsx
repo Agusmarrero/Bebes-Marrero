@@ -1,17 +1,34 @@
-import React from 'react'
 import './ListProducts.css';
+import { getFetch } from '../helpers/Helpers';
+import { useState, useEffect } from 'react'
+import ItemList from './ItemList';
+
 const ItemListContainer = (props) => {
+
+  const [products, setProducts] = useState([])  
+  const [loading, setLoading] = useState(true)  
+  const [bool, setBool] = useState(true)  
+  
+  useEffect(() => {
+      getFetch//api Fetch()
+      .then(data => {
+          console.log('llamada Api')   
+          setProducts(data)     
+      })
+      //.then(resp => console.log(resp))
+      .catch(err => console.log(err))    
+      .finally(()=> setLoading(false))
+      
+      return () => {
+          console.log('clean')
+      }
+  },[])
   return (
     <div className="container">
-        <div className="photoInit">
-            <h1 className="title-products" style={{ borderBottom: '2px solid white', marginBottom: 12 }}>{props.title}</h1>
-            <div> 
-                <img src={props.bodyPhoto}  style={{ width: props.width, height: props.height }}alt="" />
-                <img src={props.bodyPhoto2} style={{ width: props.width, height: props.height }} alt="" />
-            </div>
-        </div>
+         { loading ? <div style={{height:600}}><h1>Cargando...</h1></div>: <ItemList products={products} />}
+     
     </div>
   )
-}
+  }
 
 export default ItemListContainer

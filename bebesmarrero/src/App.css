@@ -149,3 +149,66 @@ nav a:hover:before{
   display:inline-block;
 }
 
+.card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+
+.card-footer {
+  padding: 0.75rem 1.25rem;
+  background-color: #d99973b8;
+  /* border-top: 1px solid #d99973b8; */
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #e7b09700;
+  border-radius: 0.25rem;
+}
+
+
+.w-50 {
+  width: 50% !important;
+}
+
+.mt-5,
+.my-5 {
+    margin-top: 3rem !important;
+}
+
+.btn-outline-primary {
+  border-color: #d99973b8 !important;
+  color: #d99973b8 !important;
+}
+.btn {
+  border: 0;
+  font-size: .75rem;
+  width: 20%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1.5rem;
+  color: #fff;
+  background: white;
+  text-transform: uppercase;
+  border-radius: .25rem;
+  letter-spacing: .2em;
+  transition: background .2s;
+}
