@@ -2,20 +2,20 @@ import './ListProducts.css';
 import { getFetch } from '../helpers/Helpers';
 import { useState, useEffect } from 'react'
 import ItemList from './ItemList';
+import Loading from './Loading';
+
 
 const ItemListContainer = (props) => {
 
   const [products, setProducts] = useState([])  
   const [loading, setLoading] = useState(true)  
-  const [bool, setBool] = useState(true)  
   
   useEffect(() => {
       getFetch//api Fetch()
       .then(data => {
-          console.log('llamada Api')   
+
           setProducts(data)     
       })
-      //.then(resp => console.log(resp))
       .catch(err => console.log(err))    
       .finally(()=> setLoading(false))
       
@@ -25,8 +25,7 @@ const ItemListContainer = (props) => {
   },[])
   return (
     <div className="container">
-         { loading ? <div style={{height:600}}><h1>Cargando...</h1></div>: <ItemList products={products} />}
-     
+         { loading ?  <Loading></Loading> : <ItemList products={products} />}
     </div>
   )
   }
