@@ -8,3 +8,36 @@
     max-width: 1200px;
     float:left;
 }
+
+.stepper {
+    display: flex;
+
+    /* Border */
+    border: 1px solid #d99973b8 ;
+
+    /* Size */
+    height: 32px;
+    width: 128px;
+}
+
+.stepper__button {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #d99973b8 ;
+    /* Size */
+    width: 32px;
+}
+
+.stepper__content {
+    flex: 1;
+}
+
+.stepper__input {
+    /* Take full size of its container */
+    border: 1px solid #d99973b8 ;
+    height: 100%;
+    width: 100%;
+}

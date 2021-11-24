@@ -160,15 +160,18 @@ nav a:hover:before{
 .card-body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1.25rem;
+  padding-top: 1.25rem;
 }
 
 
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: #d99973b8;
+  height: 94px;
   /* border-top: 1px solid #d99973b8; */
 }
+
+
 
 .card {
   position: relative;
@@ -186,7 +189,7 @@ nav a:hover:before{
 
 
 .w-50 {
-  width: 50% !important;
+  width: 30% !important;
 }
 
 .mt-5,
@@ -201,11 +204,37 @@ nav a:hover:before{
 .btn {
   border: 0;
   font-size: .75rem;
-  width: 20%;
+  width: 45%;
+  height: 45%;
+
+  padding: 0 1.5rem;
+  padding-bottom: -15px;
+  color: #fff;
+  background: white;
+  text-transform: uppercase;
+  border-radius: .25rem;
+  letter-spacing: .2em;
+  transition: background .2s;
+}
+
+.container-app{
+  width: 80%;
+  float:'right';
+}
+
+.btn-outline-secondary {
+  border-color: #c2784f !important;
+  color: #c2784f !important;
+}
+.btnSeconday {
+  border: 1px solid #c2784f;
+  font-size: .75rem;
+  width: 32%;
   height: 2.5rem;
+  padding-left: 20px;
   line-height: 2.5rem;
   padding: 0 1.5rem;
-  color: #fff;
+  color: #c2784f;
   background: white;
   text-transform: uppercase;
   border-radius: .25rem;
