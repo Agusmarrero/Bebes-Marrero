@@ -14,6 +14,7 @@ const ItemDetail = ({ item }) => {
     return (
        
         <div>
+             <div className="" style={{ marginBottom: 6 }}>
             <div key={item.id} className="card w-50 mt-5" style={{ display: 'inline-block', marginLeft: 100 }} >
 
                 <div className="title-products" style={{ color: '#e7b097', borderBottom: '2px solid' }}>
@@ -44,7 +45,7 @@ const ItemDetail = ({ item }) => {
                     </button>
                 </div>
             </div>
-
+        </div>
         </div>
     );
 };

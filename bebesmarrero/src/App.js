@@ -4,13 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-
 import ItemListContainer from './container/ItemListContainer';
 import CartWidget from './components/CartWidget';
-import SideBar from './components/SideBar';
 import Ppl from './components/Ppl';
 import AboutAs from './components/AboutAs';
-import ItemDetail from './container/ItemDetail';
 import ItemDetailContainer from './container/ItemDetailContainer';
 
 function App() {
@@ -24,7 +21,7 @@ function App() {
           <NavBar />
         </header>
         <div className="App-body">
-          <div style={{ display: 'flex' }}>
+          <div >
             {/* <SideBar></SideBar> */}
             <Routes>
               <Route exact path='/' element={<Ppl />} />
