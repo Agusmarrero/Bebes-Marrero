@@ -189,12 +189,18 @@ nav a:hover:before{
 
 
 .w-50 {
-  width: 30% !important;
+  width: 65% !important;
+}
+
+
+.w-60 {
+  width: 60% !important;
 }
 
 .mt-5,
 .my-5 {
     margin-top: 3rem !important;
+    margin-left: 15rem !important;
 }
 
 .btn-outline-primary {
@@ -217,9 +223,26 @@ nav a:hover:before{
   transition: background .2s;
 }
 
+.btn2 {
+  border: 0;
+  font-size: .75rem;
+  width: 25%;
+  height: 60%;
+
+  padding: 0 1.5rem;
+  padding-bottom: -15px;
+  color: #fff;
+  background: white;
+  text-transform: uppercase;
+  border-radius: .25rem;
+  letter-spacing: .2em;
+  transition: background .2s;
+}
+
 .container-app{
   width: 80%;
   float:'right';
+  height: 600px;
 }
 
 .btn-outline-secondary {
@@ -240,4 +263,24 @@ nav a:hover:before{
   border-radius: .25rem;
   letter-spacing: .2em;
   transition: background .2s;
+}
+
+.col-md-3 {
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.columna {
+  width:50%;
+  float:left;
+}
+
+@media (max-width: 500px) {
+  
+  .columna {
+    width:auto;
+    float:none;
+  }
+  
 }

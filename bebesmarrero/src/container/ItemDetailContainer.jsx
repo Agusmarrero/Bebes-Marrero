@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { itemPromise  } from "../helpers/GetFetch";
 import ItemDetail from "./ItemDetail";
+import Loading from '../components/Loading';
 
 
 
@@ -24,14 +25,11 @@ const ItemDetailContainer = () => {
   }
   }, []);
 
-
-
-
   return (
       
     <>
-
-      <ItemDetail item={item} />
+        {loading ? <Loading></Loading> : <ItemDetail item={item} />}
+     
      
     </>
   );
