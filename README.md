@@ -13,6 +13,12 @@ La tienda ecommerce que se realizo es de articulos de ropa para bebes de entre 0
 
 En la misma se pude visualizar la variedad de productos con los que cuenta la marca. Además se podrán hacer compras vía web de los artículos. 
 
+### DEPENDENCIAS ⚙️
+
+Para la realización del proyecto se utilizo la dependencia de react-router-dom.   
+Los estilos son puramente css realizado especialmente para el proyecto. 
+
+
 ## AUTORA ✒️
 
 Agustina Marrero    
