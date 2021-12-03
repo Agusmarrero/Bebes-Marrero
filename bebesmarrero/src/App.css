@@ -1,9 +1,23 @@
 .App {
   text-align: center;
   background-color: #d9997342;
+
 }
 
-
+.container{
+  height: 400px;
+}
+@media screen and (max-width: 980px){
+  .container{
+      width: 90%;
+  }
+  #contenido{
+      width: 60%;
+  }
+  #barra_lateral{
+      width:30%;
+  }
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -195,6 +209,13 @@ nav a:hover:before{
 
 .w-60 {
   width: 60% !important;
+
+}
+
+
+.w-602 {
+  width: 60% !important;
+  height: 80%;
 }
 
 .mt-5,
@@ -226,8 +247,8 @@ nav a:hover:before{
 .btn2 {
   border: 0;
   font-size: .75rem;
-  width: 25%;
-  height: 60%;
+  width: 33%;
+  height: 70%;
 
   padding: 0 1.5rem;
   padding-bottom: -15px;
@@ -243,6 +264,7 @@ nav a:hover:before{
   width: 80%;
   float:'right';
   height: 600px;
+  
 }
 
 .btn-outline-secondary {

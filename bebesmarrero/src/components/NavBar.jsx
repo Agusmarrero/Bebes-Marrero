@@ -11,27 +11,31 @@ const NavBar = () => {
       <h1>MI PEQUEÑA MARGOT</h1>
       </div>
         <nav style={{left: 292,width:1000}}>
-          <div stlye={{display:'flex'}}>
+          <div style={{display:'grid'}}>
           <div className="navbar">
           <Link to="/">
-          <a href="#">HOME</a>
+          <h1 className="title-products" style={{fontSize:16}}>HOME</h1>
           </Link>
           <Link to="/sobreNosotros">
-          <a href="#">SOBRE NOSOTROS</a>
+          <h1 className="title-products" style={{fontSize:16}}> SOBRE NOSOTROS</h1>
           </Link>
           <Link to="/productos/Conjuntos">
-          <a href="#">CONJUNTOS</a>
+          <h1 className="title-products" style={{fontSize:16}}> CONJUNTOS</h1>
           </Link>
           <Link to="/productos/Bodys">
-          <a href="#">BODYS</a>
+          <h1 className="title-products" style={{fontSize:16}}> BODYS</h1>
           </Link>
           <Link to="/productos/Accesorios">
-          <a href="#">ACCESORIOS</a>
+          <h1 className="title-products" style={{fontSize:16}}> ACCESORIOS</h1>
           </Link>
           </div>
+          <Link to="/Cart">
+          <h1 className="title-products" style={{fontSize:16, float:'right'}} >  <CartWidget></CartWidget></h1>
+          </Link>
           </div>
-          {/* <Link to="/categoria/cA"> */}
-          <CartWidget></CartWidget>
+         
+         
+
           {/* </Link> */}
         </nav>
         </div>

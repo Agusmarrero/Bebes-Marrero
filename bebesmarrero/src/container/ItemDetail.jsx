@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import ItemCount from "./ItemCount";
+
+import { useCartContext } from '../context/cartContext';
 
 const ItemDetail = ({ item }) => {
-    const [irCart, setIrCart] = useState(false);
+    const [count, setCount] = useState(1);
+    const { cartList, agregarProducto } = useCartContext()
+
+    function onAdd(cant) {
+        setCount(cant)
+        console.log(cant)
+        agregarProducto( { producto: item, cantidad: cant} )
+        
+    }
+    console.log(cartList)
 
 
-    const onAdd = (contador) => {
-        console.log("Udselecciono ", contador);
-        setIrCart(true);
-    };
 
     return (
 
@@ -34,15 +39,15 @@ const ItemDetail = ({ item }) => {
                     </div>
                     <div className="card-footer" style={{ textAlign: '-webkit-center', height:64 }}>
 
-                        {/* <div class="stepper " style={{ marginBottom: 15 }} >
-                            <button class="stepper__button">-</button>
-                            <div class="stepper__content">
-                                <input type="text" class="stepper__input" />
+                        {/* <div className="stepper " style={{ marginBottom: 15 }} >
+                            <button className="stepper__button" onClick={()=>onAdd(item.stock)} >-</button>
+                            <div className="stepper__content">
+                                <input type="text" className="stepper__input"  />
                             </div>
-                            <button class="stepper__button">+</button>
+                            <button onClick={()=>onAdd(item.stock)}  className="stepper__button">+</button>
                         </div> */}
-                        <button className="btn2 btn-outline-primary btn-block">
-                            COMPRAR
+                        <button style={{cursor:'pointer'}} onClick={()=>onAdd(item.stock)} className="btn2 btn-outline-primary btn-block">
+                           AGREGAR AL CARRITO
                         </button>
                     </div>
                 </div>

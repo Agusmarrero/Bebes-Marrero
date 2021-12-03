@@ -9,32 +9,34 @@ import CartWidget from './components/CartWidget';
 import Ppl from './components/Ppl';
 import AboutAs from './components/AboutAs';
 import ItemDetailContainer from './container/ItemDetailContainer';
+import CartContextProvider from './context/cartContext';
+import Cart from './components/Cart';
 
 function App() {
 
 
   return (
-
-    <BrowserRouter>
+    <CartContextProvider >
+    <BrowserRouter value={{}}>
       <div className="App">
         <header className="App-header">
           <NavBar />
         </header>
         <div className="App-body">
-          <div >
-            {/* <SideBar></SideBar> */}
+          <div>
             <Routes>
               <Route exact path='/' element={<Ppl />} />
               <Route exact path='/sobreNosotros' element={<AboutAs />} />
               <Route exact path='/productos/:idCategoria' element={<ItemListContainer />} />
               <Route exact path='/product/:id' element={<ItemDetailContainer />} />
-              <Route exact path='/cart' element={<CartWidget />} />
+              <Route exact path='/cart' element={<Cart />} />
             </Routes>
           </div>
         </div>
         <Footer></Footer>
       </div>
     </BrowserRouter>
+    </CartContextProvider >
   );
 }
 

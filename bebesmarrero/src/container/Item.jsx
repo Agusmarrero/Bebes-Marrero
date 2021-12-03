@@ -22,17 +22,17 @@ const Item = (prod) => {
                         </Link>
                         <div className="card-footer" style={{ textAlign: '-webkit-center' }}>
 
-                            <div class="stepper " style={{ marginBottom: 15 }} >
+                            <div className="stepper " style={{ marginBottom: 15 }} >
 
-                                <button class="stepper__button">-</button>
+                                <button className="stepper__button">-</button>
 
 
-                                <div class="stepper__content">
-                                    <input type="text" class="stepper__input" />
+                                <div className="stepper__content">
+                                    <input type="text" className="stepper__input" />
                                 </div>
 
 
-                                <button class="stepper__button">+</button>
+                                <button className="stepper__button">+</button>
                             </div>
                             <button className="btn btn-outline-primary btn-block">
                                 COMPRAR
