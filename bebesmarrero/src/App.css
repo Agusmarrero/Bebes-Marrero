@@ -181,7 +181,7 @@ nav a:hover:before{
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: #d99973b8;
-  height: 94px;
+  height: 70px;
   /* border-top: 1px solid #d99973b8; */
 }
 
@@ -260,6 +260,23 @@ nav a:hover:before{
   transition: background .2s;
 }
 
+.btn3 {
+  border: 0;
+  font-size: .75rem;
+  width:84%;
+  height:171%;
+
+  padding: 0 1.5rem;
+  padding-bottom: -15px;
+  color: white;
+  background: #dc8a65;
+  text-transform: uppercase;
+  border-radius: .25rem;
+  letter-spacing: .2em;
+  transition: background .2s;
+  
+}
+
 .container-app{
   width: 80%;
   float:'right';
@@ -305,4 +322,16 @@ nav a:hover:before{
     float:none;
   }
   
+}
+
+.swal-button{
+  background-color: #c2784f !important;
+}
+
+.swal-text{
+ text-align: center;
+}
+
+.swal-footer{
+  text-align: center;
 }

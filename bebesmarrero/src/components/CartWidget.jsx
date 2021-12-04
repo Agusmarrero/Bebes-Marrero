@@ -1,10 +1,6 @@
 import carro from '../Super.png';
 import { useCartContext } from "../context/cartContext"
 const CartWidget = () => {
-
-    const {cartList, varciarCarrtio} = useCartContext()
-
-
     return (
         <div>
             <a style={{ display: 'block', float: 'right', width: 0, bottom: 40 }}><div>

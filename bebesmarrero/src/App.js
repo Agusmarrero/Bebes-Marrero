@@ -1,11 +1,8 @@
-import { getFetch } from './helpers/GetFetch';
-import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import ItemListContainer from './container/ItemListContainer';
-import CartWidget from './components/CartWidget';
 import Ppl from './components/Ppl';
 import AboutAs from './components/AboutAs';
 import ItemDetailContainer from './container/ItemDetailContainer';

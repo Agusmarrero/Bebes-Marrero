@@ -1,5 +1,4 @@
 import React from 'react'
-import loadingBuff from '../loading-buffering.gif'
 import './SideBar.css';
 const SideBar = () => {
 

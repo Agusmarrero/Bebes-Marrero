@@ -1,7 +1,7 @@
 import './ListProducts.css';
 import { getFetch } from '../helpers/GetFetch';
 import { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom';
+import {useParams } from 'react-router-dom';
 import ItemList from './ItemList';
 import Loading from '../components/Loading';
 
