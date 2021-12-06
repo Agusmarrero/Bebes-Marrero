@@ -1,40 +1,62 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../context/cartContext';
 import swal from 'sweetalert';
 
 
-import { useCartContext } from '../context/cartContext';
+
+
 
 const ItemDetail = ({ item }) => {
     const [count, setCount] = useState(1);
     const { cartList, agregarProducto } = useCartContext()
     const [stock, setStock] = useState(0);
+
+    const [inputType, setInputType] = useState('button')
+
+    const handleInter = () => {
+        setInputType('input')
+        onAdd()
+    }
+
+    const InputCount = () => {
+
+        return <button style={{ cursor: 'pointer' }} className="btn2 btn-outline-primary btn-block"> TERMINAR COMPRA</button>
+    }
+    
+    
+    
+    const ButtonCount = ({ handleInter }) => {
+        return <button style={{ cursor: 'pointer' }}  className="btn2 btn-outline-primary btn-block" onClick={handleInter}> COMPRAR </button>
+    
+    }
     function onAdd(cant, id) {
 
         setCount(cant)
-        if(stock >=  1){
+        console.log('vino')
+        if (stock >= 1) {
             swal({
                 title: "Aviso",
                 text: "¡No hay más stock disponible!",
                 icon: "info",
-                showCancelButton: true, 
-                confirmButtonColor: "#DD6B55", 
-      
-              })
-        }else{
-            setStock(stock+1)
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+
+            })
+        } else {
+            setStock(stock + 1)
         }
-      
+
         console.log(stock)
-        // cartList.find(id)
         agregarProducto({ producto: item, cantidad: cant, id: id })
-      
+
     }
 
 
-    function rest(){
-        setStock(stock-1)
+    function rest() {
+        setStock(stock - 1)
     }
+
 
 
 
@@ -56,7 +78,7 @@ const ItemDetail = ({ item }) => {
                             </div>
                             <div className="card-body" style={{ marginLeft: 45, width: 300 }}>
                                 <h1 className="title-products" style={{ color: '#dc8a6559' }}>{item.descripcion}</h1>
-                                <div className="stepper " style={{ marginBottom: 15 , marginLeft:100, marginTop:50}} >
+                                <div className="stepper " style={{ marginBottom: 15, marginLeft: 100, marginTop: 50 }} >
                                     <button className="stepper__button" onClick={() => rest()}>-</button>
                                     <div className="stepper__content">
                                         <input type="text" value={stock} className="stepper__input" />
@@ -70,11 +92,19 @@ const ItemDetail = ({ item }) => {
                         <h1 style={{ color: '#e4b59a' }}> $ {item.price}</h1>
                     </div>
                     <div className="card-footer" style={{ textAlign: '-webkit-center', height: 55 }}>
-                    <Link to="/Cart">
-                        <button style={{ cursor: 'pointer' }} className="btn2 btn-outline-primary btn-block">
-                            TERMINAR COMPRA
-                        </button>
-                        </Link>
+
+                        
+                            {
+                                inputType === 'button' ?
+                                    <ButtonCount handleInter={handleInter} />
+                                    :
+                                    <Link to="/Cart">
+                                    <InputCount />
+                                    </Link>
+
+                            }
+
+                       
                     </div>
                 </div>
             </div>
