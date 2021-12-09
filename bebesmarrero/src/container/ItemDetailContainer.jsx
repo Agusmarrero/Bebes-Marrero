@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
   return () => {
     console.log('clean')
   }
-  }, []);
+  }, [id]);
 
   return (
       

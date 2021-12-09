@@ -1,9 +1,12 @@
 .App {
   text-align: center;
   background-color: #d9997342;
-
+  height: 70%;
 }
 
+.App-body{
+  height: 90%;
+}
 .container{
   height: 400px;
 }

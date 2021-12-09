@@ -23,18 +23,30 @@ const ItemDetail = ({ item }) => {
 
         return <button style={{ cursor: 'pointer' }} className="btn2 btn-outline-primary btn-block"> TERMINAR COMPRA</button>
     }
-    
-    
-    
-    const ButtonCount = ({ handleInter }) => {
-        return <button style={{ cursor: 'pointer' }}  className="btn2 btn-outline-primary btn-block" onClick={handleInter}> COMPRAR </button>
-    
-    }
-    function onAdd(cant, id) {
 
+
+
+    const ButtonCount = ({ handleInter }) => {
+        return <button style={{ cursor: 'pointer' }} className="btn2 btn-outline-primary btn-block" onClick={handleInter}> COMPRAR </button>
+
+    }
+    function onAdd(cant) {
         setCount(cant)
-        console.log('vino')
-        if (stock >= 1) {
+
+        // if (stock >= 1) {
+        //     // swal({
+        //     //     title: "Aviso",
+        //     //     text: "¡No hay más stock disponible!",
+        //     //     icon: "info",
+        //     //     showCancelButton: true,
+        //     //     confirmButtonColor: "#DD6B55",
+
+        //     // })
+        // } else {
+
+        // }
+       
+        if (item.stock === stock) {
             swal({
                 title: "Aviso",
                 text: "¡No hay más stock disponible!",
@@ -43,12 +55,12 @@ const ItemDetail = ({ item }) => {
                 confirmButtonColor: "#DD6B55",
 
             })
-        } else {
+        }else{
             setStock(stock + 1)
+            agregarProducto({ producto: item, quantity: cant })
+          
         }
-
-        console.log(stock)
-        agregarProducto({ producto: item, cantidad: cant, id: id })
+    
 
     }
 
@@ -83,7 +95,7 @@ const ItemDetail = ({ item }) => {
                                     <div className="stepper__content">
                                         <input type="text" value={stock} className="stepper__input" />
                                     </div>
-                                    <button onClick={() => onAdd(item.stock, item.id)} className="stepper__button">+</button>
+                                    <button onClick={() => onAdd(1)} className="stepper__button">+</button>
                                 </div>
                             </div>
 
@@ -93,18 +105,18 @@ const ItemDetail = ({ item }) => {
                     </div>
                     <div className="card-footer" style={{ textAlign: '-webkit-center', height: 55 }}>
 
-                        
-                            {
-                                inputType === 'button' ?
-                                    <ButtonCount handleInter={handleInter} />
-                                    :
-                                    <Link to="/Cart">
+
+                        {
+                            inputType === 'button' ?
+                                <ButtonCount handleInter={handleInter} />
+                                :
+                                <Link to="/Cart">
                                     <InputCount />
-                                    </Link>
+                                </Link>
 
-                            }
+                        }
 
-                       
+
                     </div>
                 </div>
             </div>
