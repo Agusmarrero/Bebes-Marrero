@@ -9,9 +9,9 @@ import swal from 'sweetalert';
 
 const ItemDetail = ({ item }) => {
     const [count, setCount] = useState(1);
-    const { cartList, agregarProducto } = useCartContext()
+    const { agregarProducto, eliminarItem, menosCarrito} = useCartContext()
+  
     const [stock, setStock] = useState(0);
-
     const [inputType, setInputType] = useState('button')
 
     const handleInter = () => {
@@ -23,7 +23,7 @@ const ItemDetail = ({ item }) => {
 
         return <button style={{ cursor: 'pointer' }} className="btn2 btn-outline-primary btn-block"> TERMINAR COMPRA</button>
     }
-
+    
 
 
     const ButtonCount = ({ handleInter }) => {
@@ -31,21 +31,9 @@ const ItemDetail = ({ item }) => {
 
     }
     function onAdd(cant) {
-        setCount(cant)
-
-        // if (stock >= 1) {
-        //     // swal({
-        //     //     title: "Aviso",
-        //     //     text: "¡No hay más stock disponible!",
-        //     //     icon: "info",
-        //     //     showCancelButton: true,
-        //     //     confirmButtonColor: "#DD6B55",
-
-        //     // })
-        // } else {
-
-        // }
        
+        setCount(cant)
+     
         if (item.stock === stock) {
             swal({
                 title: "Aviso",
@@ -58,15 +46,17 @@ const ItemDetail = ({ item }) => {
         }else{
             setStock(stock + 1)
             agregarProducto({ producto: item, quantity: cant })
-          
+        
         }
     
 
     }
 
 
-    function rest() {
+    function rest(cant) {
         setStock(stock - 1)
+        eliminarItem({ id: item.id, quantity: cant })
+        menosCarrito()
     }
 
 
