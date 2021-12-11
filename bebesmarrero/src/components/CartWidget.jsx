@@ -1,10 +1,8 @@
 import carro from '../Super.png';
 import { useCartContext } from "../context/cartContext"
-import React, { useState, useEffect } from "react";
+
 const CartWidget = () => {
     const { totalCarrito } = useCartContext()
-    const [total, setTotal] = useState(true)
-
     return (
         <>
 

@@ -14,7 +14,7 @@ function payMethod() {
 
     })
 }
-function Cart(item) {
+function Cart() {
 
     const { cartList, eliminarItem, precioTotal } = useCartContext()
 

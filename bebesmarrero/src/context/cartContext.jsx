@@ -8,9 +8,7 @@ export const useCartContext = () => useContext(CartContext)
 function CartContextProvider({ children }) {
     //Guardo los productos del carrito
     const [cartList, setCartList] = useState([])
-    const [totalPrice, setTotalPrice] = useState();
 
-    const [total, setTotal] = useState(1);
     //Agregar un producto al listado
     const agregarProducto = (item) => {
         totalCarrito()

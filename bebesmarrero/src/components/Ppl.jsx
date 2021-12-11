@@ -12,9 +12,9 @@ const Ppl = () => {
                     <img src="https://i.ibb.co/gZYbjmj/Instagram-400-x-500-px.png" alt="Whats-App-Image-2021-11-09-at-11-26-25" style={{ width: 400, height: 500, marginTop: 100, marginLeft: 100 , marginBottom:10}} />
                     <div>
                         <h1 className="title" style={{ marginTop: 180, marginLeft: 60, fontSize: 50 }}>¡SEGUINOS EN LAS REDES SOCIALES!</h1>
-                        <img style={{ float: 'center' }} src={facebook} alt="logo" width="50" height="50" />
-                        <img style={{ float: 'center', marginLeft: 10 }} src={instagram} alt="logo" width="52" height="52" />
-                        <img style={{ float: 'center', marginLeft: 10 }} src={phone} alt="logo" width="52" height="52" />
+                        <img style={{ float: 'center' }} src={facebook}  width="50" height="50" />
+                        <img style={{ float: 'center', marginLeft: 10 }} src={instagram}  width="52" height="52" />
+                        <img style={{ float: 'center', marginLeft: 10 }} src={phone}  width="52" height="52" />
                     </div>
                 </div>
                 <div style={{ display: 'flex', marginBottom: 40 }}>

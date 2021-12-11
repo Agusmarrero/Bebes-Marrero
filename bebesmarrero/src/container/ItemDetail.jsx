@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from "react";
+import { Link, useParams } from 'react-router-dom';
 import { useCartContext } from '../context/cartContext';
 import swal from 'sweetalert';
 
@@ -8,9 +8,10 @@ import swal from 'sweetalert';
 
 
 const ItemDetail = ({ item }) => {
+
     const [count, setCount] = useState(1);
     const { agregarProducto, eliminarItem, menosCarrito} = useCartContext()
-  
+
     const [stock, setStock] = useState(0);
     const [inputType, setInputType] = useState('button')
 
