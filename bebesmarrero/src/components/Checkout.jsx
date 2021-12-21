@@ -17,15 +17,15 @@ function Checkout ()  {
     }
     const [data, setData] = useState({
         name:'',
-        phone:'',
+        lastname:'',
+        ci: '',
         email: '',
-        validate: '',
+        phone:'',
+        address:'',
     })
     const [idOrBool, setIdOrBool] = useState(true);
     const [idOrder, setIdOrder] = useState('')
     const generateOrder = (e) => {
-
-
 
         e.preventDefault();
 
@@ -39,8 +39,8 @@ function Checkout ()  {
 
     
         order.items = cartList.map(cartItem => {
-            const id = cartItem.product.idProd
-            const name = cartItem.product.brand
+            const id = cartItem.product.id
+            const name = cartItem.product.categoria
             const price = cartItem.product.price * cartItem.quantity
 
             return {id,name, price} 
@@ -107,7 +107,7 @@ const handleChange=(e)=>{
                                         <label className="title-products" style={{ color: '#0000009e', fontSize: 15 }}>Apellido</label>
                                     </td>
                                     <td>
-                                        <input type="text" name="apellido" value={data.apellido} />
+                                        <input type="text" name="lastname" value={data.lastname} />
                                     </td>
                                 </tr>
                                 <tr>
@@ -115,13 +115,13 @@ const handleChange=(e)=>{
                                         <label className="title-products" style={{ color: '#0000009e', fontSize: 15 }}>Cedula</label>
                                     </td>
                                     <td>
-                                        <input type="text" name="cedula" value={data.cedula} />
+                                        <input type="text" name="ci" value={data.ci} />
                                     </td>
                                     <td>
                                         <label className="title-products" style={{ color: '#0000009e', fontSize: 15 }}>Celular</label>
                                     </td>
                                     <td>
-                                        <input type="text" name="celular" value={data.celular} />
+                                        <input type="text" name="phone" value={data.phone} />
                                     </td>
                                 </tr>
                                 <tr>
@@ -129,7 +129,7 @@ const handleChange=(e)=>{
                                         <label className="title-products" style={{ color: '#0000009e', fontSize: 15 }}>Direccion</label>
                                     </td>
                                     <td>
-                                        <input type="text" name="direccion" value={data.direccion} />
+                                        <input type="text" name="address" value={data.address} />
                                     </td>
                                     <td>
                                         <label className="title-products" style={{ color: '#0000009e', fontSize: 15 }}>Email</label>
