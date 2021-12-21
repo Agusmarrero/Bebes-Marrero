@@ -17,7 +17,7 @@ const ItemDetail = ({ item }) => {
 
     const handleInter = () => {
         setInputType('input')
-        onAdd()
+        onAdd(1)
     }
 
     const InputCount = () => {

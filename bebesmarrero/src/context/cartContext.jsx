@@ -12,7 +12,7 @@ function CartContextProvider({ children }) {
     //Agregar un producto al listado
     const agregarProducto = (item) => {
         totalCarrito()
-   
+        console.log(item)
         if(isInCart(item.producto.id)){
             let index = cartList.findIndex((obj => obj.producto.id === item.producto.id));
             let cartItem = cartList[index];
