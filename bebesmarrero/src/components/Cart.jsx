@@ -74,28 +74,6 @@ function Cart() {
                             </div>
 
                         </div>
-
-                        {/* <div className="title-products  " style={{ color: '#e7b097', float: 'left' }}>
-                        <h1 className="title-products" style={{ color: '#0000009e', marginTop: 15 }} > MÉTODO DE PAGO</h1>
-                        <div>
-                            <ul style={{ display: 'grid' }}>
-                                <div><input type="radio" /><a><img src="https://i.ibb.co/BfMv7X7/1.png" style={{ height: 20 }} alt="1" border="0"></img></a></div>
-                                <div><input type="radio" /><a><img src="https://i.ibb.co/Jr4TvwH/2.png" style={{ height: 20 }} alt="1" border="0"></img></a></div>
-                                <div><input type="radio" /><a><img src="https://i.ibb.co/fMNN6K6/3.png" style={{ height: 20 }} alt="1" border="0"></img></a></div>
-                                <button style={{ cursor: 'pointer', color: 'white' }} onClick={() => payMethod()} className="btn3  btn-block">IR A PAGAR</button>
-                            </ul>
-                        </div>
-                 
-
-                    <div className="card-body" >
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <div className="card-body" style={{ textAlign: "left", marginLeft: 45, width: 300 }}>
-                            </div>
-
-                        </div>
-                    </div> */}
-
-                        {/* </div> */}
                     </div>
 
                     <div className="title-products" style={{ color: '#e7b097', float: 'right', width: 400, height: 350, border: '2px solid #e7b097', marginTop:20 }}>

@@ -16,7 +16,7 @@ const NavBar = () => {
           <Link to="/">
           <h1 className="title-products" style={{fontSize:16}}>HOME</h1>
           </Link>
-          <Link to="/sobreNosotros">
+          <Link to="/aboutAs">
           <h1 className="title-products" style={{fontSize:16}}> SOBRE NOSOTROS</h1>
           </Link>
           <Link to="/productos/Conjuntos">
@@ -28,10 +28,14 @@ const NavBar = () => {
           <Link to="/productos/Accesorios">
           <h1 className="title-products" style={{fontSize:16}}> ACCESORIOS</h1>
           </Link>
+          {/* <Link to="/login">
+          <h1 className="title-products" style={{fontSize:16}}> CUENTA</h1>
+          </Link> */}
           </div>
           <Link to="/Cart">
           <h1 className="title-products" style={{fontSize:16, float:'right'}} >  <CartWidget></CartWidget></h1>
           </Link>
+         
           </div>
          
          

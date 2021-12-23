@@ -22,9 +22,15 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
+// const auth = firebase.auth();
+// const providers = {
+//   google: new firebase.auth.GoogleAuthProvider(),
+// };
 
+// export { auth, providers };
 
 export default function getFirestore(){
   
   return firebase.firestore(app)
 }
+

@@ -9,6 +9,7 @@ import ItemDetailContainer from './container/ItemDetailContainer';
 import CartContextProvider from './context/cartContext';
 import Cart from './components/Cart';
 import Checkout from  './components/Checkout';
+import Login from  './components/Login';
 
 function App() {
 
@@ -24,11 +25,12 @@ function App() {
           <div>
             <Routes>
               <Route exact path='/' element={<Ppl />} />
-              <Route exact path='/sobreNosotros' element={<AboutAs />} />
+              <Route exact path='/aboutAs' element={<AboutAs />} />
               <Route exact path='/productos/:idCategoria' element={<ItemListContainer />} />
               <Route exact path='/product/:id' element={<ItemDetailContainer />} />
               <Route exact path='/cart' element={<Cart />} />
               <Route exact path='/checkout' element={<Checkout />} />
+         
             </Routes>
           </div>
         </div>
