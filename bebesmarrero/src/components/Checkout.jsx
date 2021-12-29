@@ -93,6 +93,8 @@ function Checkout() {
         })
     }
 
+
+    
     const authentication = () => {
         let nombre = data.name;
         let apellido = data.lastname;
