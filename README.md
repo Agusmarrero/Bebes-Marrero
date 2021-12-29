@@ -21,7 +21,9 @@ La aplicación web, cuenta con varias páginas por las cuales se irá navegando 
 
 ####REACT-ROUTER-DOM
 Para la realización del proyecto se utilizo la dependencia de react-router-dom, para poder hacer la navegación del mismo. 
+
 ####ESTILO E INTERFAZ
+
 Los estilos son puramente css realizado especialmente para el proyecto, tratando de mantener una simetría con los colores de la marca. Ademas se utilizo material de UI para crear una interfaz amigable con el usuario y de fácil comprensión. 
 
 ### BASE DE DATOS :computer:
