@@ -13,7 +13,7 @@ La tienda ecommerce que se realizo es de articulos de ropa para bebes de entre 0
 
 En la misma se pude visualizar la variedad de productos con los que cuenta la marca. Además se podrán hacer compras vía web de los artículos.
 
-
+Para visualizar la aplicación se puede entrar [aquí](https://eloquent-turing-7b2684.netlify.app/)
 ### APLICACIÓN :heavy_check_mark:
 La aplicación web, cuenta con varias páginas por las cuales se irá navegando para hacer la compra. Se cuenta con la página principal, luego varias con diferentes tipos de productos, organizados por categoría. Además, se puede detallar cada uno de los productos, para terminar su compra. Por último, hay un formulario de compra, para llevar a cabo la compra final
 
