@@ -19,15 +19,16 @@ La aplicación web, cuenta con varias páginas por las cuales se irá navegando 
 
 ### DEPENDENCIAS ⚙️
 
-REACT-ROUTER-DOM  
+REACT-ROUTER-DOM   (v6.0.2)
 Para la realización del proyecto se utilizo la dependencia de react-router-dom, para poder hacer la navegación del mismo. 
 
 ESTILO E INTERFAZ   
 Los estilos son puramente css realizado especialmente para el proyecto, tratando de mantener una simetría con los colores de la marca. Ademas se utilizo material de UI para crear una interfaz amigable con el usuario y de fácil comprensión. 
+Para las alertas con estilos  
+SweetAlert2 (v11.3.0)
 
-### BASE DE DATOS :computer:
+### BASE DE DATOS :computer: (v8.9.1)
 Se utiliza firebase, el cual nos permite tener nuestra base de datos organizada y sostenida en el tiempo. En la misma, se guarda la iformación de los productos, organizados por categoria, precios y stock. Además se guardan las ordenes generadas a través de la página, para de esta manera tener noción de las compras y poder llevarlas a cabo de forma correcta.  
-
 
 ## AUTORA ✒️
 
